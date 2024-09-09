@@ -221,7 +221,7 @@ const LoginPage = () => {
           </Col>
 
         </Row>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div style={{ display: 'flex', flexDirection: 'row',gap:"5px" }}>
   <Link
     style={{
       width: "150px",
@@ -238,6 +238,7 @@ const LoginPage = () => {
       fontSize: "16px",
       fontWeight: "bold",
       transition: "background-color 0.3s, color 0.3s",
+      whiteSpace:"nowrap"
     }}
     to="/admin/home"
   >
@@ -259,6 +260,8 @@ const LoginPage = () => {
       fontSize: "16px",
       fontWeight: "bold",
       transition: "background-color 0.3s, color 0.3s",
+      whiteSpace:"nowrap"
+
     }}
     to="/users/me"
   >
