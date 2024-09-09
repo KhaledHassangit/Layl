@@ -126,6 +126,7 @@ a{
 
 ::-webkit-scrollbar-track {
   border-radius: 15px;
+  background-color: #2e2d2d; 
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 
@@ -3040,7 +3041,7 @@ td {
   right: 0;
   height: 100%;
   width: 240px;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   background: rgba(33, 33, 33, 1);
   color: white !important;
@@ -3048,10 +3049,9 @@ td {
   z-index: 100;
   direction: rtl;
   transition: all 0.5s ease !important;
-  overflow: auto;
+  /* overflow-y: scroll; */
 
 }
-
 
 
 .logo_items {
@@ -3082,7 +3082,7 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 30px;
   overflow-y: auto;
   height: 100%;
 }
@@ -3139,7 +3139,7 @@ td {
   text-decoration: none;
   border-radius: 12px;
   margin-bottom: 8px;
-  padding: 10px;
+  padding: 5px;
   color: white;
   font-weight: 400;
   transition: all 0.5s ease;
@@ -4830,7 +4830,7 @@ canvas {
 }
 
 .cookie-consent-box.show {
-  bottom: 0px; 
+  bottom: 20px; 
 }
 
 .cookie-image {
@@ -4892,7 +4892,7 @@ canvas {
   }
 
   .cookie-consent-box.show {
-    bottom: 20px;
+    bottom: 0px;
   }
 
   .cookie-consent-content {
