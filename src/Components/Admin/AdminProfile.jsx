@@ -6,6 +6,7 @@ import Cookie from 'universal-cookie';
 import AdminChangePasswordHook from '../../CustomHooks/Admin/AdminChangePassword-Hook';
 import { ToastContainer } from 'react-toastify';
 import { Bounce } from 'react-awesome-reveal';
+import me from "../../Images/colored.jpg"
 const AdminProfile = () => {
     const cookie = new Cookie()
 
@@ -13,11 +14,12 @@ const AdminProfile = () => {
     if (cookie.get('UserData') !== null) {
         userData = cookie.get('UserData');
     }
+
     const [passwordModalShow, handlePasswordModalShow, handlePasswordModalClose,
-        oldPassword, newPassword, setOldPassword, 
-        setNewPassword, 
+        oldPassword, newPassword, setOldPassword,
+        setNewPassword,
         handlePasswordChange,
-        confirmPassword,setConfirmPassword
+        confirmPassword, setConfirmPassword
     ] = AdminChangePasswordHook()
     return (
         <main className='mt-5 admin-profile admin-bg' dir='rtl' style={{ maxWidth: "100%", margin: "0 auto" }}>
@@ -37,9 +39,13 @@ const AdminProfile = () => {
                         <div className='user-image'>
                             {userData.profile_img ? (
                                 <Bounce triggerOnce={true}>
-
-                                    <img loading='lazy' src={`http://localhost:8000${userData.profile_img}`} alt="User" className='user-photo' /> // Display image if it exists
-                                    </Bounce>
+                                    <img
+                                        loading='lazy'
+                                        src={userData.profile_img ? `http://localhost:8000${userData.profile_img}` : me}
+                                        alt="User"
+                                        className='user-photo'
+                                    />
+                                </Bounce>
                             ) : (
                                 <h1>{userData.full_name ? userData.full_name.charAt(0) : 'U'}</h1>
                             )}
@@ -54,7 +60,7 @@ const AdminProfile = () => {
                             <ul className='data d-flex flex-column  align-items-start' >
                                 <li id="username"> {userData ? userData.full_name : 'Loading...'}</li>
                                 <li id="email">{userData ? userData.email : 'Loading...'}</li>
-                                <li className='mt-3 '>*********<CiEdit style={{marginRight:"2px",marginBottom:"15px",  cursor: 'pointer' }} onClick={handlePasswordModalShow} /></li>
+                                <li className='mt-3 '>*********<CiEdit style={{ marginRight: "2px", marginBottom: "15px", cursor: 'pointer' }} onClick={handlePasswordModalShow} /></li>
                             </ul>
                         </div>
                         <Modal show={passwordModalShow} onHide={handlePasswordModalClose} dir='ltr'>
@@ -102,7 +108,7 @@ const AdminProfile = () => {
                         </Modal>
                     </div>
                 </div>
-                <ToastContainer/>
+                <ToastContainer />
             </Container>
         </main>
     )
