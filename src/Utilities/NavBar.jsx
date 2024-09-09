@@ -103,7 +103,7 @@ const NavBar = () => {
       <Navbar style={{ zIndex: "101" }} expand="lg" className="d-flex flex-nowrap navbar-solid">
         <Container>
           <Link to="/">
-            <picture className='img-box'>
+            <picture className='navbar-brand '>
               <source srcSet={Logowebp} type="image/webp" />
               <img src={Logowebp} alt="Logo" width="80" height="80" />
             </picture>

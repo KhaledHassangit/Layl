@@ -282,7 +282,7 @@ li {
 }
 @media (max-width:815px) {
   .navbar-brand img {
-    margin-left: 50px;
+    margin-left: 5px;
 
   }
 
@@ -293,19 +293,19 @@ li {
 
 @media (max-width:580px) {
   .navbar-brand img {
-    margin-left: 100px;
+    margin-left: 55px;
 
   }
 }
 
 @media (max-width:390px) {
   .navbar-brand img {
-    width: 70px !important;
-    height: 70px !important;
+    width: 80px !important;
+    height: 80px !important;
   }
 
   .navbar-brand img {
-    margin-left: 50px;
+    margin-left: 40px;
     margin-top: 8px !important;
 
 
