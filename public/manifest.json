@@ -1,0 +1,32 @@
+{
+    "name": "Layl Store",
+    "short_name": "Layl",
+    "description": "Online Bags Store",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "./Logo.webp",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/webp"
+        },
+        {
+            "src": "./Logo.webp",
+            "type": "image/webp",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./Logo.webp",
+            "type": "image/webp",
+            "sizes": "512x512"
+        },
+        {
+            "src": "../src/Images/maskable-icon.webp",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
