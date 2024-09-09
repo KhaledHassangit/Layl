@@ -41,7 +41,7 @@ const AdminProfile = () => {
                                 <Bounce triggerOnce={true}>
                                     <img
                                         loading='lazy'
-                                        src={userData.profile_img ? `http://localhost:8000${userData.profile_img}` : me}
+                                        src={userData?.profile_img ? `http://localhost:8000${userData.profile_img}` : me}
                                         alt="User"
                                         className='user-photo'
                                     />
