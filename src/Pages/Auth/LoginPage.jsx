@@ -221,7 +221,7 @@ const LoginPage = () => {
           </Col>
 
         </Row>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
   <Link
     style={{
       width: "150px",
@@ -241,7 +241,7 @@ const LoginPage = () => {
     }}
     to="/admin/home"
   >
-    Admin Home
+    Admin Dashboard
   </Link>
   
   <Link
@@ -262,7 +262,7 @@ const LoginPage = () => {
     }}
     to="/users/me"
   >
-    User Profile
+    User Dashboard
   </Link>
       </div>
 
