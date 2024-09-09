@@ -221,7 +221,7 @@ const LoginPage = () => {
           </Col>
 
         </Row>
-        <div style={{ display: 'flex', flexDirection: 'row',gap:"5px" }}>
+        <div style={{ display: 'flex', flexDirection: 'row',gap:"10px",justifyContent:'center',marginTop:'10px' }}>
   <Link
     style={{
       width: "150px",
@@ -235,7 +235,7 @@ const LoginPage = () => {
       border: "2px solid #d2691e",
       borderRadius: "5px",
       marginBottom: "10px",
-      fontSize: "16px",
+      fontSize: "12px",
       fontWeight: "bold",
       transition: "background-color 0.3s, color 0.3s",
       whiteSpace:"nowrap"
@@ -257,7 +257,7 @@ const LoginPage = () => {
       color: "#d2691e",
       border: "2px solid #d2691e",
       borderRadius: "5px",
-      fontSize: "16px",
+      fontSize: "12px",
       fontWeight: "bold",
       transition: "background-color 0.3s, color 0.3s",
       whiteSpace:"nowrap"

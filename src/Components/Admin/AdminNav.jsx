@@ -44,7 +44,7 @@ const AdminNav = () => {
   }, []);
 
   const baseUrl = 'ws://127.0.0.1:8000/ws/notifications/';
-  const [messages, res, handleDeleteNotification,getNotifications] = useWebSocket(baseUrl);
+  const [messages, res, handleDeleteNotification, getNotifications] = useWebSocket(baseUrl);
 
   const handleNotificationClick = (message) => {
     let targetPath = '';
@@ -86,8 +86,6 @@ const AdminNav = () => {
       } else {
         toastMessage = latestMessage.event;
       }
-  console.log(messages)
-  console.log(res)
       toast(`🔔 New Notification: ${toastMessage}`, {
         position: "top-right",
         autoClose: 2000,
@@ -99,10 +97,12 @@ const AdminNav = () => {
         theme: "dark",
         className: "toast-progress-custom", 
         onClose: getNotifications() 
-
       });
     }
   }, [messages]);
+
+  // Calculate the total number of notifications
+  const totalNotifications = (res && res.data ? res.data.length : 0) + messages.length;
 
   return (
     <>
@@ -125,34 +125,42 @@ const AdminNav = () => {
           <div className="dropdown" ref={dropdownRef}>
             <div className="notify d-flex align-items-center" onClick={toggleDropdown}>
               <span>الإشعارات</span>
-              <span className="badge">{(res && res.data ? res.data.length : 0) + messages.length}</span>
+              <span className="badge">{totalNotifications}</span>
               <HiBell className="bell-icon" />
             </div>
             {isOpen && (
-            <div className={`dropdown-content ${isOpen ? 'show' : ''}`} style={{ maxHeight: '400px', overflow: 'auto' }}>
-              <h6>لديك <span className="mx-1" style={{ color: "#FF9B1B" }}>{(res && res.data ? res.data.length : 0) + messages.length}</span> إشعارات جديدة.</h6>
-              <hr className="mb-2" />
-              {[...messages, ...res.data].slice().reverse().slice(0, displayCount).map((message, index) => (
-                <div key={index} className="d-flex align-items-center notifiy-container">
-                  {message.type === 'Request' && <PiGitPullRequestBold className="icon" style={{ width: "25px", height: "25px", color: "rgb(50, 175, 30)" }} />}
-                  {message.type === 'Order' && <IoDownload className="icon" style={{ width: "25px", height: "25px", color: "rgb(18 171 207)" }} />}
-                  {message.type === 'Quantity Alarm' && <RiAlarmWarningFill className="icon" style={{ width: "25px", height: "25px", color: "#e72323" }} />}
-                  {message.type === 'Coupon Alarm' && <BiSolidDiscount className="icon" style={{ width: "25px", height: "25px", color: "rgb(225 147 25)" }} />}
-                  {message.type === 'Discount Alarm' && <RiDiscountPercentFill className="icon" style={{ width: "25px", height: "25px", color: "rgb(225 147 25)" }} />}
-                  <a style={{ color: "white", cursor: "pointer", flexGrow: 1 }} onClick={() => handleNotificationClick(message)}>{message.message}</a>
-                  <RiDeleteBinLine className="delete-icon" style={{ minWidth: "25px", minHeight: "25px", cursor: "pointer", marginLeft: "10px" }} onClick={() => handleDelete(message.id)} />
-                  {animationState === message.id && (
-                    <div className="border-animation"></div>
-                  )}
-                </div>
-              ))}
-              {displayCount < (res && res.data ? res.data.length : 0) + messages.length && (
-                <div className="d-flex justify-content-center mt-2">
-                  <button onClick={loadMoreNotifications} className="view-more-link">عرض الإشعارات السابقة</button>
-                </div>
-              )}
-            </div>
-          )}
+              <div className={`dropdown-content ${isOpen ? 'show' : ''}`} style={{ maxHeight: '400px', overflow: 'auto' }}>
+                <h6>
+                  لديك <span className="mx-1" style={{ color: "#FF9B1B" }}>{totalNotifications}</span> إشعارات جديدة.
+                </h6>
+                <hr className="mb-2" />
+                {totalNotifications === 0 ? (
+                  <div className="d-flex justify-content-center mt-3">
+                    <span style={{ color: "#FF9B1B" }}>لا يوجد إشعارات</span>
+                  </div>
+                ) : (
+                  [...messages, ...res.data].slice().reverse().slice(0, displayCount).map((message, index) => (
+                    <div key={index} className="d-flex align-items-center notifiy-container">
+                      {message.type === 'Request' && <PiGitPullRequestBold className="icon" style={{ width: "25px", height: "25px", color: "rgb(50, 175, 30)" }} />}
+                      {message.type === 'Order' && <IoDownload className="icon" style={{ width: "25px", height: "25px", color: "rgb(18 171 207)" }} />}
+                      {message.type === 'Quantity Alarm' && <RiAlarmWarningFill className="icon" style={{ width: "25px", height: "25px", color: "#e72323" }} />}
+                      {message.type === 'Coupon Alarm' && <BiSolidDiscount className="icon" style={{ width: "25px", height: "25px", color: "rgb(225 147 25)" }} />}
+                      {message.type === 'Discount Alarm' && <RiDiscountPercentFill className="icon" style={{ width: "25px", height: "25px", color: "rgb(225 147 25)" }} />}
+                      <a style={{ color: "white", cursor: "pointer", flexGrow: 1 }} onClick={() => handleNotificationClick(message)}>{message.message}</a>
+                      <RiDeleteBinLine className="delete-icon" style={{ minWidth: "25px", minHeight: "25px", cursor: "pointer", marginLeft: "10px" }} onClick={() => handleDelete(message.id)} />
+                      {animationState === message.id && (
+                        <div className="border-animation"></div>
+                      )}
+                    </div>
+                  ))
+                )}
+                {displayCount < totalNotifications && (
+                  <div className="d-flex justify-content-center mt-2">
+                    <button onClick={loadMoreNotifications} className="view-more-link">عرض الإشعارات السابقة</button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </nav>
       </div>

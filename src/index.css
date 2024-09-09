@@ -204,7 +204,7 @@ ul.pagination li {
 .navbar-toggler-icon {
   position: absolute !important;
   left: 5% !important;
-  top: 53% !important;
+  top: 55% !important;
   transform: translate(-50%, -50%);
 }
 
@@ -294,21 +294,17 @@ li {
 @media (max-width:580px) {
   .navbar-brand img {
     margin-left: 55px;
-
+    width: 75px !important;
+    height: 75px !important;
+    margin-top:5px !important;
   }
 }
 
 @media (max-width:390px) {
   .navbar-brand img {
-    width: 80px !important;
-    height: 80px !important;
-  }
-
-  .navbar-brand img {
     margin-left: 40px;
-    margin-top: 8px !important;
-
-
+    width: 70px !important;
+    height: 70px !important;
 
   }
 
@@ -317,6 +313,14 @@ li {
 
 .navbar{
   height: 100px;
+}
+
+@media (max-width:576px) {
+
+  .navbar{
+    height: 85px;
+  }
+
 }
 .navbar-solid {
   background-color: #0a0a0a !important;
@@ -613,6 +617,7 @@ li {
     height: 450px;
     width: 100%;
     margin-bottom: 30px;
+    display: none ;
   }
 
 }
@@ -2049,7 +2054,7 @@ input::-webkit-inner-spin-button {
   }
 
   .search-container {
-    width: 350px;
+    width: 330px;
   }
   .search-toggle{
     font-size: 12px;
@@ -2704,11 +2709,13 @@ input::-webkit-inner-spin-button {
 /* User Page */
 
 .account-info {
-  width: 100%;
+  width: 100% !important;
   height: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   font-family: "Poppins", sans-serif !important;
+  overflow: hidden !important;
+  margin-right: 0 !important;
 }
 
 .account-info .user-buttons {
@@ -3041,6 +3048,7 @@ td {
   z-index: 100;
   direction: rtl;
   transition: all 0.5s ease !important;
+  overflow: auto;
 
 }
 
@@ -3360,6 +3368,7 @@ td {
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-left: 50px ;
   transition: 0.5s all ease !important;
 
 }
@@ -3879,7 +3888,7 @@ canvas {
 .admin-profile .address-container {
   width: 100%;
   height: 600px;
-  padding: 24px;;
+  padding: 40px;;
   background-color: #212121;
   border-radius: 12px;
 }
@@ -4129,7 +4138,7 @@ canvas {
 .modal-footer .btn-save  , .btn-save{
   background-color: #FF9B1B !important;
   color: white !important;
-  padding: 10px 30px !important;
+  padding: 0.625rem 1.875rem !important;
   border: none !important;
   opacity: .9;
   transition: .3s ease-in-out;
@@ -4308,12 +4317,13 @@ canvas {
 
 @media (max-width:767px) {
   .modal-content {
-    max-width: 350px !important;
+    max-width: 300px !important;
     min-height: 70px !important;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
+    padding: 16px !important;
   }
 
   .modal-content .btn-close {
@@ -4330,8 +4340,6 @@ canvas {
     top: -32px;
   }
 }
-
-
 
 /* Admin Products */
 
