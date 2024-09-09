@@ -12,7 +12,7 @@
 // export default LaylStore 
 
 import { legacy_createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import {thunk} from 'redux-thunk';
 import RootReducer from './RootReducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
