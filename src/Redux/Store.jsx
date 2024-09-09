@@ -1,19 +1,20 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers'; // Adjust this path based on your setup
+    import { legacy_createStore, applyMiddleware } from 'redux';
+    import thunk from 'redux-thunk'; // You don't need to destructure thunk
+    import RootReducer from './RootReducer';
+    import { composeWithDevTools } from 'redux-devtools-extension';
 
-const initialState = {};
-const middleware = [thunk];
+    const initialState = {};
+    const Middleware = [thunk];
 
-const composeEnhancers =
-  process.env.NODE_ENV === 'development'
-    ? (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose)
-    : compose;
+    const composeEnhancers = 
+    process.env.NODE_ENV === 'development'
+        ? composeWithDevTools 
+        : (f) => f;         
 
-const store = createStore(
-  rootReducer,
-  initialState,
-  composeEnhancers(applyMiddleware(...middleware))
-);
+    const LaylStore = legacy_createStore(
+    RootReducer,
+    initialState,
+    composeEnhancers(applyMiddleware(...Middleware)) // Apply middleware
+    );
 
-export default store;
+    export default LaylStore;
