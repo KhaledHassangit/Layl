@@ -64,10 +64,7 @@ const ProductsFilterHook = () => {
     
         if (value && to && value > to) {
             setError("To price must be ≥ From price.");
-        } else {
-            setError('');
         }
-    
         localStorage.setItem("pricefrom", value);
         localStorage.removeItem('newUrl');
     
@@ -84,8 +81,6 @@ const ProductsFilterHook = () => {
     
         if (value && from && value < from) {
             setError("To price must be ≥ From price.");
-        } else {
-            setError('');
         }
     
         localStorage.setItem("priceto", value);
