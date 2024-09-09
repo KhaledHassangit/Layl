@@ -4822,7 +4822,7 @@ canvas {
 }
 
 .cookie-consent-box.show {
-  bottom: 20px; 
+  bottom: 0px; 
 }
 
 .cookie-image {
@@ -4879,7 +4879,7 @@ canvas {
 @media (max-width: 600px) {
   .cookie-consent-box {
     width: 100%; 
-    left: 20px;
+    left: 0px;
     bottom: -400px; 
   }
 
