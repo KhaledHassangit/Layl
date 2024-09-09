@@ -37,14 +37,21 @@ const AdminProfile = () => {
                     </div>
                     <div className='admin'>
                         <div className='user-image'>
-                            {userData.profile_img ? (
+                            {/* {userData.profile_img ? (
                                 <Bounce triggerOnce={true}>
-                                    {/* <img
+                                    <img
                                         loading='lazy'
                                         src={userData?.profile_img ? `http://localhost:8000${userData.profile_img}` : me}
                                         alt="User"
                                         className='user-photo'
-                                    /> */}
+                                    />
+                               
+                                </Bounce>
+                            ) : (
+                                <h1>{userData.full_name ? userData.full_name.charAt(0) : 'K'}</h1>
+                            )} */}
+
+                                <Bounce triggerOnce={true}>
                                     <img
                                         loading='lazy'
                                         src={me}
@@ -52,9 +59,6 @@ const AdminProfile = () => {
                                         className='user-photo'
                                     />
                                 </Bounce>
-                            ) : (
-                                <h1>{userData.full_name ? userData.full_name.charAt(0) : 'K'}</h1>
-                            )}
                         </div>
 
                         <div className='d-flex justify-content-start mt-3 user-info '>
