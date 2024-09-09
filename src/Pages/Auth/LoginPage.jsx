@@ -221,19 +221,23 @@ const LoginPage = () => {
           </Col>
 
         </Row>
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
   <Link
     style={{
-      width: "100px",
+      width: "150px",
       height: "50px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "white",
+      backgroundColor: "transparent",
       textDecoration: "none",
-      color: "black",
-      border: "1px solid black",
+      color: "#d2691e",
+      border: "2px solid #d2691e",
+      borderRadius: "5px",
       marginBottom: "10px",
+      fontSize: "16px",
+      fontWeight: "bold",
+      transition: "background-color 0.3s, color 0.3s",
     }}
     to="/admin/home"
   >
@@ -242,21 +246,26 @@ const LoginPage = () => {
   
   <Link
     style={{
-      width: "100px",
+      width: "150px",
       height: "50px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "white",
+      backgroundColor: "transparent",
       textDecoration: "none",
-      color: "black",
-      border: "1px solid black",
+      color: "#d2691e",
+      border: "2px solid #d2691e",
+      borderRadius: "5px",
+      fontSize: "16px",
+      fontWeight: "bold",
+      transition: "background-color 0.3s, color 0.3s",
     }}
     to="/users/me"
   >
     User Profile
   </Link>
-</div>
+      </div>
+
 
 
 
