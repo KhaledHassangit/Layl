@@ -13,11 +13,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      {/* <Provider store={LaylStore}> */}
+      <Provider store={LaylStore}>
         <GoogleOAuthProvider clientId="69261592377">
             <App />
         </GoogleOAuthProvider>
-      {/* </Provider> */}
+      </Provider>
     </HelmetProvider>
   </React.StrictMode>
 );
