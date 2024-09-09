@@ -5,9 +5,17 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState= {}
 const Middleware= [thunk]
+const composeEnhancers =
 
-const LaylStore = legacy_createStore
-(RootReducer,initialState,composeWithDevTools(applyMiddleware(...Middleware)))
+    process.env.NODE_ENV === 'development'
+        ? composeWithDevTools
+        : (f) => f;
+
+    const LaylStore = legacy_createStore(
+    RootReducer,
+    initialState,
+    composeEnhancers(applyMiddleware(...Middleware))
+    );
 
 export default LaylStore 
 
