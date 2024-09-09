@@ -102,7 +102,7 @@ const CookieConsent = () => {
 
 const App = () => {
   const [isAdmin, isUser] = ProtectedRoutesHook();
-  const [refreshTokenFunction, loadingToken] = UseRefreshToken();
+  // const [refreshTokenFunction, loadingToken] = UseRefreshToken();
 
   const router = createBrowserRouter(
     createRoutesFromElements(
