@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Disallow: /cart/
-Allow: /products/
-Allow: /public/
-
-# Sitemap
-Sitemap: https://www.yourwebsite.com/sitemap.xml
