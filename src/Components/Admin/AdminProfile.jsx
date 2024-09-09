@@ -39,15 +39,21 @@ const AdminProfile = () => {
                         <div className='user-image'>
                             {userData.profile_img ? (
                                 <Bounce triggerOnce={true}>
-                                    <img
+                                    {/* <img
                                         loading='lazy'
                                         src={userData?.profile_img ? `http://localhost:8000${userData.profile_img}` : me}
+                                        alt="User"
+                                        className='user-photo'
+                                    /> */}
+                                    <img
+                                        loading='lazy'
+                                        src={me}
                                         alt="User"
                                         className='user-photo'
                                     />
                                 </Bounce>
                             ) : (
-                                <h1>{userData.full_name ? userData.full_name.charAt(0) : 'U'}</h1>
+                                <h1>{userData.full_name ? userData.full_name.charAt(0) : 'K'}</h1>
                             )}
                         </div>
 
