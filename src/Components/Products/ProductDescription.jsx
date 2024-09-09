@@ -60,4 +60,4 @@ const ProductDescription = () => {
   )
 }
 
-export default ProductDescription
+export default React.memo(ProductDescription)

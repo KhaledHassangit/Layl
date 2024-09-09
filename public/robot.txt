@@ -1,8 +1,29 @@
+# Allow all bots to crawl the site
 User-agent: *
-Disallow: /admin/
-Disallow: /cart/
-Allow: /products/
-Allow: /public/
 
-# Sitemap
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+# Disallow crawling of the admin dashboard and sensitive user-related pages
+Disallow: /admin/
+Disallow: /users/me
+Disallow: /login
+Disallow: /register
+Disallow: /forget-password
+Disallow: /password-reset-confirm/
+Disallow: /cart/checkout
+Disallow: /orderconfirmation
+
+# Allow indexing of the home page, products page, and individual product details
+Allow: /
+Allow: /products
+Allow: /products/productdetails/
+Allow: /cart
+
+# Disallow crawling of the 404 error page
+Disallow: /404
+
+# Allow specific assets to be crawled (CSS, JS, images)
+Allow: /*.css$
+Allow: /*.js$
+Allow: /images/
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://yourdomain.com/sitemap.xml

@@ -6,15 +6,16 @@ const LazyBackground = ({ src, className, children, style }) => {
   useEffect(() => {
     const img = new Image();
     img.src = src;
-    img.onload = () => {
-      setLoaded(true);
+    img.onload = () => setLoaded(true);
+    img.onerror = () => {
+      setLoaded(false);
     };
   }, [src]);
 
   const combinedStyle = {
     ...style,
     backgroundImage: loaded ? `url(${src})` : 'none',
-    transition: 'background-image 0.3s ease-in-out',
+    transition: 'background-image 0.5s ease-in-out',
   };
 
   return (

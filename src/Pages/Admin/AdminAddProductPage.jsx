@@ -1,7 +1,8 @@
 import React from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 import AdminSidebar from '../../Components/Admin/AdminSideBar';
-import AdminAddProduct from "../../Components/Admin/AdminAddProducts"
+import AdminAddProduct from '../../Components/Admin/AdminAddProduct';
+
 const AdminAddProductPage = () => {
     return (
     <Container fluid style={{ minHeight: "600px", maxWidth: "100%", margin: "0 auto" }}>

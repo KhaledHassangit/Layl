@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 
 const UserPage = () => {
     return (
+        
         <section className='bg' style={{minHeight:"600px",color:"white"}}>
             <Helmet>
             <title> User Dashboard </title>
