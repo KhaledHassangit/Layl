@@ -135,7 +135,8 @@ const App = () => {
           <Route path='register' element={<Register />} />
           <Route path='/forget-password' element={<ForgetPassword />} />
           <Route path='password-reset-confirm/:uid/:token' element={<ResetPassword />} />
-          <Route path='/products/productdetails/:id' element={<ProductsDetailsPage />} />
+          {/* <Route path='/products/productdetails/:id' element={<ProductsDetailsPage />} /> */}
+          <Route path='/products/productdetails/' element={<ProductsDetailsPage />} />
           <Route path='cart/checkout' element={<CheckOut />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/oderconfirmed' element={<OrderConfirmation />} />
