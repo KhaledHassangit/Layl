@@ -51,17 +51,17 @@ const Contact = () => {
                             <Fade cascade damping={0.3} triggerOnce={true}>
                                 <ul className='d-flex mt-1 '>
                                     <li>
-                                        <Link target='blank' to="https://www.facebook.com/layll.eg?mibextid=ZbWKwL" aria-label="Facebook Page">
+                                        <Link target='blank' to="/" aria-label="Facebook Page">
                                             <FaFacebook />
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link target='blank' to="https://www.instagram.com/layl.eg_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram Page">
+                                        <Link target='blank' to="/" aria-label="Instagram Page">
                                             <FaSquareInstagram />
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link target='blank' to="https://www.tiktok.com/@layl.eg?_t=8o3hCtAxPUF&_r=1" aria-label="Tiktok Page">
+                                        <Link target='blank' to="/" aria-label="Tiktok Page">
                                             <FaTiktok />
                                         </Link>
                                     </li>
