@@ -79,16 +79,16 @@ const Footer = () => {
                                 <h2>Social</h2>
                                 <ul>
                                     <li>
-                                        <Link target='blank' to="https://www.facebook.com/layll.eg?mibextid=ZbWKwL">Facebook</Link>
+                                        <Link target='blank' to="/">Facebook</Link>
                                     </li>
                                     <li>
-                                        <Link target='blank' to="https://www.tiktok.com/@layll.eg">TikTok</Link>
+                                        <Link target='blank' to="/">TikTok</Link>
                                     </li>
                                     <li>
-                                        <Link target='blank' to="https://www.instagram.com/layl.eg_">Instagram</Link>
+                                        <Link target='blank' to="/">Instagram</Link>
                                     </li>
                                     <li>
-                                        <Link target='_blank' rel="noopener noreferrer" to="https://api.whatsapp.com/send/?phone=201004039735&text&type=phone_number&app_absent=0">WhatsApp</Link>
+                                        <Link target='blank' rel="noopener noreferrer" to="https://api.whatsapp.com/send/?phone=201004039735&text&type=phone_number&app_absent=0">WhatsApp</Link>
                                     </li>
                                 </ul>
                             </div>
