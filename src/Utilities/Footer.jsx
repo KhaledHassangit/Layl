@@ -137,14 +137,15 @@ const Footer = () => {
                         <Col md="6">
                             <Fade cascade damping={0.3} triggerOnce={true}>
 
-                                <div className="skillzy d-flex flex-column">
-                                    <h2>Powered by © 2024 Skillzy</h2>
-                                    <ul className="d-flex">
+                            <div className="skillzy d-flex flex-column">
+                                    <h2>Powered by ©  <a href="https://portfolio-khaled-theta.vercel.app/" target="blank">Khaled Hassan</a></h2>
+                                    {/* <ul className="d-flex">
                                         <li><Link to="#">Facebook</Link></li>
                                         <li><Link to="#">Instagram</Link></li>
                                         <li><Link to="#">LinkedIn</Link></li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
+
                             </Fade>
 
                         </Col>
