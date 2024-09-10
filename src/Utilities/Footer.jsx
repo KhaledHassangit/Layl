@@ -88,7 +88,7 @@ const Footer = () => {
                                         <Link target='blank' to="/">Instagram</Link>
                                     </li>
                                     <li>
-                                        <Link target='blank' rel="noopener noreferrer" to="https://api.whatsapp.com/send/?phone=201004039735&text&type=phone_number&app_absent=0">WhatsApp</Link>
+                                        <Link target='blank' rel="noopener noreferrer" to="https://api.whatsapp.com/send/?phone=201211559176&text&type=phone_number&app_absent=0">WhatsApp</Link>
                                     </li>
                                 </ul>
                             </div>
