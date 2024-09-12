@@ -4195,6 +4195,9 @@ canvas {
     font-size: 12px !important;
   }
 }
+.modal-open{
+  padding-right: 0px !important;
+}
 .form-control::placeholder {
   color: #FFFFFF !important;
   font-weight: 400 !important;
